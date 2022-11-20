@@ -42,7 +42,7 @@ int deque()
 void display()
 {
 	if(front ==-1&&rear==-1)
-	printf("stack is underflow");
+	printf("queue is underflow");
 	else
 	{
 		for( i = front; i<=rear;i++)
@@ -60,7 +60,7 @@ scanf("%d",&max);
 	 repeat = 4;
 	while(repeat==4)
 	{
-		printf("enter 1 to push,2 to pop, 3 to display \n");
+		printf("enter 1 to enque,2 to deque, 3 to display \n");
 		scanf("%d",&choice);
 		switch(choice)
 		{
