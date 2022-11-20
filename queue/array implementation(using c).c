@@ -54,8 +54,8 @@ void display()
 int main()
 {
 	front = rear = -1;
- max;
-printf("enter the max of stack \n");
+ 
+printf("enter the max of queue \n");
 scanf("%d",&max);
 	 repeat = 4;
 	while(repeat==4)
