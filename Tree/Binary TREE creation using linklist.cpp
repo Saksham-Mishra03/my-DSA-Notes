@@ -1,24 +1,38 @@
-#include<iostream>
-#include<stdlib.h>
+#include<bits/stdc++.h>
 using namespace std;
-struct node
-{
-	int data;
-	struct node *left, *right;
+class node{
+    public:
+    int data;
+    node* left;
+    node* right;
+    
+    // constructor to initalize class with default values
+    node(int d)
+    {
+        data = d;
+        left = NULL;
+        right = NULL;
+    }
 };
-struct node *create()
+
+node *builttree()
 {
-	int x;
-	struct node *newnode();
-	newnode = (struct node*)malloc(sizeof(struct node))//use new keyword in case of class
-	printf("enter data and -1 for no newnode");
-	scanf("%d",&x);
-	if(x==-1)
-	return 0;
-	newnode ->data = x;
-	printf("enter left child of %d",x);
-	newnode->left=create();
-	printf("enter right child of %d",x);
-	newnode->right=create();
-	return newnode;
+    int d;
+    cin>>d;
+    if(d == -1)
+    {
+        return NULL;
+    }
+    node *root = new node(d);
+    cout<<"enter left child and -1 for null";
+    root->left = builttree();
+    cout<<"enter right child and -1 for null";
+    root->right = builttree();
+    return root;
+}
+
+int main()
+{   
+    cout<<"enter root node";
+    node* root = builttree();
 }
